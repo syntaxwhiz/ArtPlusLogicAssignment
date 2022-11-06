@@ -124,4 +124,11 @@ class Program
         }
         Console.WriteLine("Decoded string: " + decoded_string);
     }
+
+    static string DecimalToBinaryTwosComplement(int decimalValue)
+    {
+        uint uintValue = (uint)decimalValue;
+        string binary = Convert.ToString(uintValue, 2).PadLeft(32, '0');
+        return binary;
+    }
 }
